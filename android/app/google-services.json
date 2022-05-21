@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "662602419470",
+    "project_id": "agafa-a3765",
+    "storage_bucket": "agafa-a3765.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662602419470:android:7956471206f24b85985b5f",
+        "android_client_info": {
+          "package_name": "ben.anzo.agafa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662602419470-mu3gpdur48f97k4ehnrfgl8uedh32kqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrSfB6zYYMFbNxiZefEHXzWXRw0oTs69U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662602419470-mu3gpdur48f97k4ehnrfgl8uedh32kqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
