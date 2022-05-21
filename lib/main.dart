@@ -8,7 +8,7 @@ import 'View/SignIn_Screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
- await Firebase.initializeApp().then((value) {
+  await Firebase.initializeApp().then((value) {
     Get.put(UserController());
   });
   runApp(MyApp());
@@ -26,3 +26,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+// je suis la junior pour causer on ecris de commentaire 
+//on commence par gerer  la responsiviter 

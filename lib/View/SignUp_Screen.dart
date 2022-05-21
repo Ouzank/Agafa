@@ -15,7 +15,6 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -34,13 +33,13 @@ class SignUp extends StatelessWidget {
                             "Email",
                             Icons.email,
                             userController.email,
-                            "Entrez le nom l'email de  l'association"),
+                            "Entrez nom l'email de  l'association"),
                         inputsizebox,
                         myTextFormField(
                             "Telephone",
                             Icons.phone,
                             userController.phone,
-                            "Entrez le numero de telephone de  l'association"),
+                            "Entrez votre  numero de telephone"),
                         inputsizebox,
                         Obx(() => TextFormField(
                               controller: userController.password,
