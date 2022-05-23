@@ -26,7 +26,7 @@ class SignIn extends StatelessWidget {
           SafeArea(
             child: Container(
               decoration: BoxDecoration(color: mainColor),
-              height: 60,
+              height: 65,
             ),
           ),
           // inputsizebox,
@@ -38,12 +38,21 @@ class SignIn extends StatelessWidget {
                     topRight: Radius.circular(30)),
                 color: Colors.white),
             child: Column(children: [
-              SvgPicture.asset(
-                'assets/chicken.svg',
-                height: 160,
-              ),
               const SizedBox(
-                height: 20,
+                height: 10,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: Colors.grey,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(top: 12),
+                  child: SvgPicture.asset(
+                    'assets/verrt.png',
+                    height: 150,
+                  ),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(10),

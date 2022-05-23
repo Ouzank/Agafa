@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../Constants/Constants.dart';
+import '../Constants/constants.dart';
 
 Widget buildButton(String title, GlobalKey<FormState> onClick) {
   return ElevatedButton(
