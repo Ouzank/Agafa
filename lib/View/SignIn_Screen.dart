@@ -47,10 +47,9 @@ class SignIn extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.only(top: 12),
+                  padding: EdgeInsets.only(top: 02),
                   child: SvgPicture.asset(
-                    'assets/verrt.png',
-                    height: 150,
+                    'assets/chicken.svg',
                   ),
                 ),
               ),
