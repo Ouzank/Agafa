@@ -42,6 +42,8 @@ class SignIn extends StatelessWidget {
                 height: 10,
               ),
               Container(
+                height: 150,
+                width: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
                   color: Colors.grey,
@@ -50,6 +52,8 @@ class SignIn extends StatelessWidget {
                   padding: EdgeInsets.only(top: 02),
                   child: SvgPicture.asset(
                     'assets/chicken.svg',
+                    height: 70,
+                    width: 70,
                   ),
                 ),
               ),
