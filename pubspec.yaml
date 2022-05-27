@@ -75,6 +75,13 @@ flutter:
     - assets/chicken2.svg
     - assets/chicken3.svg
     - assets/rooster.svg
+    - assets/Chickenfinission.svg
+    - assets/chickendemarrage.svg
+    - assets/chickencroissance.svg
+    - assets/chickenpouletchair.svg
+    - assets/chickenpondeuse.svg
+    - assets/chickenacceuil.svg
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

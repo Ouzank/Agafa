@@ -51,7 +51,7 @@ class SignIn extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(top: 02),
                   child: SvgPicture.asset(
-                    'assets/chicken.svg',
+                    'assets/chickenacceuil.svg',
                     fit: BoxFit.cover,
                   ),
                 ),
