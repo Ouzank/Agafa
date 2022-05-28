@@ -71,16 +71,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/chicken.svg
-    - assets/chicken1.svg
-    - assets/chicken2.svg
     - assets/chicken3.svg
-    - assets/rooster.svg
-    - assets/Chickenfinission.svg
-    - assets/chickendemarrage.svg
-    - assets/chickencroissance.svg
-    - assets/chickenpouletchair.svg
-    - assets/chickenpondeuse.svg
-    - assets/chickenacceuil.svg
+    - assets/chickeneffectif.jpeg
+    - assets/chickenfinission.png
+    - assets/chickendemarrage.png
+    - assets/chickencroissance.png
+    - assets/chickenpouletchair.png
+    - assets/chickenpondeuse.png
+    - assets/chickenacceuil.jpg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

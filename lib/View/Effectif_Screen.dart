@@ -54,7 +54,7 @@ class _SelectEffectifState extends State<SelectEffectif> {
                   Center(
                     child: Text(
                       "Entrez l'effectif de votre popullation",
-                      style: TextStyle(fontSize: 20.0),
+                      style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.w600),
                     ),
                   ),
                   Padding(
@@ -70,8 +70,13 @@ class _SelectEffectifState extends State<SelectEffectif> {
                       ),
                     )),
                   ),
+                 Container(
+                   height: 370,
+                    child: Image.asset('assets/chickeneffectif.jpeg',
+                        fit: BoxFit.cover),
+                  ),
                   SizedBox(
-                    height: 400,
+                    height: 30,
                   ),
                   Row(children: [
                     TextButton(

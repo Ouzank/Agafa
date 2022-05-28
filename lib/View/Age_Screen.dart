@@ -41,8 +41,8 @@ class _SelectAgeState extends State<SelectAge> {
                   ),
                   ),
                   ),
-          Expanded(child: 
-             Container(
+          
+            Expanded( child: Container(
               
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -54,20 +54,27 @@ class _SelectAgeState extends State<SelectAge> {
               child: Column(
                 children: [
                   Center(
-                    child: Text("Selectionner l'âge de  votre population"),
+                    child: Text("Selectionner l'âge de  votre population",
+                    style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: mainColor,
+                          )),
                   ),
                   SizedBox(
-                    height: 12.0,
+                    height: 30.0,
                   ),
                   Card(
+                    elevation: 10,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Padding(
                           padding: EdgeInsets.all(15.0),
-                          child: SvgPicture.asset(
-                            'assets/chickendemarrage.svg',
-                            fit: BoxFit.cover,
-                          ),
+                          child: Image.asset('assets/chickendemarrage.png',
+                          fit:BoxFit.cover,
+                             height: 100,
+                        ),
                         ),
                         Column(
                           children: const [
@@ -75,10 +82,14 @@ class _SelectAgeState extends State<SelectAge> {
                               child: Text(
                                 'Poussin Demarrage',
                                 style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.w900),
+                                    fontSize:16, fontWeight: FontWeight.w900),
                               ),
                             ),
-                            Text('un poulet croquette')
+                            Text('un poulet croquette',
+                            style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
+                          ), )
                           ],
                         )
                       ],
@@ -88,13 +99,17 @@ class _SelectAgeState extends State<SelectAge> {
                     height: 12.0,
                   ),
                   Card(
+                    elevation:10,
+                    
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Padding(
                           padding: EdgeInsets.only(top: 02),
-                          child: SvgPicture.asset(
-                            'assets/chickencroissance.svg',
+                          child: Image.asset(
+                            'assets/chickencroissance.png',
                             fit: BoxFit.cover,
+                               height: 120,
                           ),
                         ),
                         Column(
@@ -103,10 +118,14 @@ class _SelectAgeState extends State<SelectAge> {
                               child: Text(
                                 'Poussin Croissance',
                                 style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.w900),
+                                    fontSize: 16, fontWeight: FontWeight.w900),
                               ),
                             ),
-                            Text('un mini poulet')
+                            Text('un mini poulet',
+                            style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                          ))
                           ],
                         )
                       ],
@@ -116,13 +135,16 @@ class _SelectAgeState extends State<SelectAge> {
                     height: 12.0,
                   ),
                   Card(
+                    elevation:10,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Padding(
                           padding: EdgeInsets.only(top: 02),
-                          child: SvgPicture.asset(
-                            'assets/Chickenfinission.svg',
+                          child: Image.asset(
+                            'assets/chickenfinission.png',
                             fit: BoxFit.cover,
+                            height: 120,
                           ),
                         ),
                         Column(
@@ -131,17 +153,21 @@ class _SelectAgeState extends State<SelectAge> {
                               child: Text(
                                 'Poulette Finission',
                                 style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.w900),
+                                    fontSize: 20, fontWeight: FontWeight.w900),
                               ),
                             ),
-                            Text('Poulet adulte')
+                            Text('Poulet adulte',
+                            style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                          ),)
                           ],
                         )
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 50.0,
+                    height: 20.0,
                   ),
                   Row(children: [
                     TextButton(
