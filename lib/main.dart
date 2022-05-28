@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:agafa/Controllers/UserController.dart';
+import 'package:agafa/View/Effectif_Screen.dart';
+import 'package:agafa/View/GetStarted_Screen.dart';
+import 'package:agafa/View/PopulationType_Screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Agafa',
-      home: SignIn(),
+      home: SelectEffectif(),
       debugShowCheckedModeBanner: false,
     );
   }
