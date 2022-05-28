@@ -41,9 +41,9 @@ class _SelectAgeState extends State<SelectAge> {
                   ),
                   ),
                   ),
-          SafeArea(
-            child: Container(
-              height: 550,
+          Expanded(child: 
+             Container(
+              
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
@@ -141,7 +141,7 @@ class _SelectAgeState extends State<SelectAge> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 50.0,
                   ),
                   Row(children: [
                     TextButton(
@@ -154,7 +154,7 @@ class _SelectAgeState extends State<SelectAge> {
                             color: mainColor,
                           )),
                     ),
-                    SizedBox(width: 120),
+                    SizedBox(width: 100),
                     ElevatedButton(
                       onPressed: (() => Get.to(SelectEffectif())),
                       child: Text("Suivant",

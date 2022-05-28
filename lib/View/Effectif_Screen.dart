@@ -38,6 +38,7 @@ class _SelectEffectifState extends State<SelectEffectif> {
                         color: Colors.white,
                         fontWeight: FontWeight.w900))),
           ),
+          Expanded(child: 
           Container(
               padding: EdgeInsets.all(10),
               height: 559,
@@ -70,7 +71,7 @@ class _SelectEffectifState extends State<SelectEffectif> {
                     )),
                   ),
                   SizedBox(
-                    height: 340,
+                    height: 400,
                   ),
                   Row(children: [
                     TextButton(
@@ -83,7 +84,7 @@ class _SelectEffectifState extends State<SelectEffectif> {
                               color: mainColor),
                         )),
                     SizedBox(
-                      width: 110,
+                      width: 90,
                     ),
                     Center(
                         child: ElevatedButton(
@@ -107,7 +108,8 @@ class _SelectEffectifState extends State<SelectEffectif> {
                   ])
                 ],
               ))
-        ],
+                  ),
+                  ],
       )),
     );
   }
