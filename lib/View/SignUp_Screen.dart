@@ -53,7 +53,11 @@ class SignUp extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Form(
+<<<<<<< HEAD
+                          key: formKeyRegister,
+=======
                          key: formKeyRegister,
+>>>>>>> f9a9fc11a853bf476e49af159dc9d30bf3082379
                             child: Column(
                               children: [
                                 Center(

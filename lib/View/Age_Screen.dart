@@ -26,24 +26,21 @@ class _SelectAgeState extends State<SelectAge> {
           child: Column(
         children: [
           SafeArea(
-              child: Container(
-                  height: 90,
-                  child: Center(
-                    child: Text(
-                      'AGAFA',
-                      style: 
-                         GoogleFonts.comicNeue(
-                        fontSize: 40,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900
-                    ),
-                    ),
-                  ),
-                  ),
-                  ),
-          
-            Expanded( child: Container(
-              
+            child: Container(
+              height: 90,
+              child: Center(
+                child: Text(
+                  'AGAFA',
+                  style: GoogleFonts.comicNeue(
+                      fontSize: 40,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Container(
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
@@ -54,12 +51,21 @@ class _SelectAgeState extends State<SelectAge> {
               child: Column(
                 children: [
                   Center(
+<<<<<<< HEAD
+                    child: Text("Selectionner l'âge de  votre population",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: mainColor,
+                        )),
+=======
                     child: Text("Sélectionner l'âge de  votre population",
                     style: GoogleFonts.comicNeue(
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                             color: mainColor,
                           )),
+>>>>>>> f9a9fc11a853bf476e49af159dc9d30bf3082379
                   ),
                   SizedBox(
                     height: 30.0,
@@ -71,15 +77,30 @@ class _SelectAgeState extends State<SelectAge> {
                       children: [
                         Padding(
                           padding: EdgeInsets.all(15.0),
-                          child: Image.asset('assets/chickendemarrage.png',
-                          fit:BoxFit.cover,
-                             height: 100,
-                        ),
+                          child: Image.asset(
+                            'assets/chickendemarrage.png',
+                            fit: BoxFit.cover,
+                            height: 100,
+                          ),
                         ),
                         Column(
                           children: [
                             Center(
                               child: Text(
+<<<<<<< HEAD
+                                'Poussin Demarrage',
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w900),
+                              ),
+                            ),
+                            Text(
+                              'un poulet croquette',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            )
+=======
                                 'Poussin Démarrage',
                                 style: GoogleFonts.comicNeue(
                                     fontSize:16, fontWeight: FontWeight.w900),
@@ -90,6 +111,7 @@ class _SelectAgeState extends State<SelectAge> {
                             fontSize: 18,
                             fontWeight: FontWeight.w400,
                           ), )
+>>>>>>> f9a9fc11a853bf476e49af159dc9d30bf3082379
                           ],
                         )
                       ],
@@ -99,8 +121,7 @@ class _SelectAgeState extends State<SelectAge> {
                     height: 12.0,
                   ),
                   Card(
-                    elevation:10,
-                    
+                    elevation: 10,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -109,7 +130,7 @@ class _SelectAgeState extends State<SelectAge> {
                           child: Image.asset(
                             'assets/chickencroissance.png',
                             fit: BoxFit.cover,
-                               height: 120,
+                            height: 120,
                           ),
                         ),
                         Column(
@@ -122,10 +143,17 @@ class _SelectAgeState extends State<SelectAge> {
                               ),
                             ),
                             Text('un mini poulet',
+<<<<<<< HEAD
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w400,
+                                ))
+=======
                             style: GoogleFonts.comicNeue(
                             fontSize: 20,
                             fontWeight: FontWeight.w400,
                           ))
+>>>>>>> f9a9fc11a853bf476e49af159dc9d30bf3082379
                           ],
                         )
                       ],
@@ -135,7 +163,7 @@ class _SelectAgeState extends State<SelectAge> {
                     height: 12.0,
                   ),
                   Card(
-                    elevation:10,
+                    elevation: 10,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -156,11 +184,21 @@ class _SelectAgeState extends State<SelectAge> {
                                     fontSize: 20, fontWeight: FontWeight.w900),
                               ),
                             ),
+<<<<<<< HEAD
+                            Text(
+                              'Poulet adulte',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            )
+=======
                             Text('Poulet adulte',
                             style: GoogleFonts.comicNeue(
                             fontSize: 20,
                             fontWeight: FontWeight.w400,
                           ),)
+>>>>>>> f9a9fc11a853bf476e49af159dc9d30bf3082379
                           ],
                         )
                       ],
@@ -169,6 +207,20 @@ class _SelectAgeState extends State<SelectAge> {
                   SizedBox(
                     height: 20.0,
                   ),
+<<<<<<< HEAD
+                  Row(children: [
+                    TextButton(
+                      onPressed: (() =>
+                          Get.back()), //la page de selection de du type),
+                      child: Text("Précédent",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: mainColor,
+                          )),
+                    ),
+                    SizedBox(width: 70),
+=======
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -193,6 +245,7 @@ class _SelectAgeState extends State<SelectAge> {
                               color: mainColor),
                         )),
                   
+>>>>>>> f9a9fc11a853bf476e49af159dc9d30bf3082379
                     ElevatedButton(
                       onPressed: (() => Get.to(SelectEffectif())),
                       child: Text("Suivant",

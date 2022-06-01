@@ -39,6 +39,87 @@ class _SelectEffectifState extends State<SelectEffectif> {
                         color: Colors.white,
                         fontWeight: FontWeight.w900))),
           ),
+<<<<<<< HEAD
+          Expanded(
+              child: Container(
+                  padding: EdgeInsets.all(10),
+                  height: 559,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30.0),
+                      topRight: Radius.circular(30.0),
+                    ),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Center(
+                        child: Text(
+                          "Entrez l'effectif de votre popullation",
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Form(
+                            child: Center(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              labelText: 'Effectif',
+                              hintText:
+                                  "Entrez l'effectif de votre population ",
+                            ),
+                            keyboardType: TextInputType.number,
+                          ),
+                        )),
+                      ),
+                      Container(
+                        height: 300,
+                        child: Image.asset('assets/chickeneffectif.jpeg',
+                            fit: BoxFit.cover),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(children: [
+                        TextButton(
+                            onPressed: (() => Get.to(SelectAge())),
+                            child: Text(
+                              'Précedent',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: mainColor),
+                            )),
+                        SizedBox(
+                          width: 60,
+                        ),
+                        Center(
+                            child: ElevatedButton(
+                          onPressed: () => Get.to(FormulePoulet),
+                          child: Text('Suivant',
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w900)),
+                          style: ButtonStyle(
+                              elevation: MaterialStateProperty.all<double?>(15),
+                              padding:
+                                  MaterialStateProperty.all<EdgeInsetsGeometry?>(
+                                      EdgeInsets.symmetric(
+                                          vertical: 10, horizontal: 45)),
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Color.fromARGB(255, 3, 131, 33)),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder?>(
+                                  RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(40)))),
+                        ))
+                      ])
+                    ],
+                  ))),
+        ],
+=======
           Expanded(child: 
           Container(
               padding: EdgeInsets.all(10),
@@ -135,6 +216,7 @@ class _SelectEffectifState extends State<SelectEffectif> {
               ))
                   ),
                   ],
+>>>>>>> f9a9fc11a853bf476e49af159dc9d30bf3082379
       )),
     );
   }
