@@ -1,12 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:agafa/Constants/constants.dart';
 import 'package:agafa/Controllers/UserController.dart';
 import 'package:agafa/View/Effectif_Screen.dart';
 import 'package:agafa/View/GetStarted_Screen.dart';
 import 'package:agafa/View/PopulationType_Screen.dart';
+import 'package:agafa/View/Splash_Screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'View/SignIn_Screen.dart';
 
 Future<void> main() async {
@@ -14,6 +17,9 @@ Future<void> main() async {
   await Firebase.initializeApp().then((value) {
     Get.put(UserController());
   });
+    prefs = await SharedPreferences.getInstance();
+  showHome = prefs.getBool('showHome') ?? false;
+
   runApp(MyApp());
 }
 
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Agafa',
-      home: SelectEffectif(),
+      home:Splash(showHome: showHome,),
       debugShowCheckedModeBanner: false,
     );
   }
