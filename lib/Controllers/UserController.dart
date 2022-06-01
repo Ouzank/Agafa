@@ -4,6 +4,8 @@ import 'package:agafa/Constants/Firebase.dart';
 import 'package:agafa/Constants/constants.dart';
 import 'package:agafa/Constants/controllers.dart';
 import 'package:agafa/View/Home_Screen.dart';
+import 'package:agafa/View/IntroSlider_Screen.dart';
+import 'package:agafa/View/SignIn_Screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -20,9 +22,9 @@ class UserController extends GetxController {
   TextEditingController phone = TextEditingController();
 
   String usersCollection = "users";
-  
+
   @override
-  void onReady() {
+  Future<void> onReady() async {
     super.onReady();
     firebaseUser = Rx<User?>(auth.currentUser);
     firebaseUser.bindStream(auth.userChanges());
@@ -31,26 +33,29 @@ class UserController extends GetxController {
   signIn(String email, String password) async {
     try {
       await auth
-          .signInWithEmailAndPassword(email: email.trim(), password: password.trim())
+          .signInWithEmailAndPassword(
+              email: email.trim(), password: password.trim())
           .then((result) async {
         Get.offAll(Home());
         //    formKeyLogin.currentState!.reset();
         uId = result.user!.uid;
-       
+
         errortext.value = '';
         signInLoading.toggle();
         print(signInLoading.value);
         print(uId);
       });
     } on FirebaseAuthException catch (e) {
-      String error='';
+      String error = '';
       print(e.message);
       signInLoading.toggle();
       if (e.message == 'The email address is badly formatted.') {
-           error = " Format de l'e-mail incorrect";
-      }else if(e.message == 'The password is invalid or the user does not have a password.'){
-         error = "Mot de passe incorrect";
-      }else if(e.message == 'There is no user record corresponding to this identifier. The user may have been deleted.'){
+        error = " Format de l'e-mail incorrect";
+      } else if (e.message ==
+          'The password is invalid or the user does not have a password.') {
+        error = "Mot de passe incorrect";
+      } else if (e.message ==
+          'There is no user record corresponding to this identifier. The user may have been deleted.') {
         error = "Cet utilisateur n'existe pas";
       }
       print(error);
@@ -70,6 +75,7 @@ class UserController extends GetxController {
           .then((result) {
         String userId = result.user!.uid;
         print(userId);
+        Get.offAll(Home());
         _addUserToFirestore(userId, nom, email, phone);
         //  _clearControllers();
       });
@@ -110,12 +116,12 @@ class UserController extends GetxController {
   void signOut() async {
     try {
       formKeyLogin.currentState?.reset();
-      
-      await auth.signOut();
+
+      await auth.signOut().then((value) {
+        Get.off(SignIn());
+      });
     } catch (e) {
       print(e.toString());
     }
   }
-
-  
 }

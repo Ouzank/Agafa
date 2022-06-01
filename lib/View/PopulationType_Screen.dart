@@ -41,114 +41,114 @@ class PopulationType extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Material(
-                      elevation: 15,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      surfaceTintColor: mainColor,
-                      color: mainColor,
-                      shadowColor: mainColor,
-                      type: MaterialType.card,
-                      child: InkWell(
-                        onTap: (() {
-                          Get.to(SelectEffectif());
-                        }),
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          shadowColor: mainColor,
-                          elevation: 15,
-                          child: Container(
-                            height: 200,
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(30),
-                                    topRight: Radius.circular(30))),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                SvgPicture.asset('assets/rooster.svg',
-                                    height: 100),
-                                Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 30,
-                                    ),
-                                    Text('Pondeuse',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.comicNeue(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold)),
-                                    inputsizebox,
-                                    Text('omoqsoq',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.comicNeue(
-                                          fontSize: 16,
-                                        )),
-                                  ],
-                                )
-                              ],
-                            ),
+                    InkWell(
+                      onTap: (() {
+                        Get.to(SelectEffectif());
+                      }),
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        shadowColor: mainColor,
+                        elevation: 15,
+                        child: Container(
+                          height: 200,
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(30),
+                                  topRight: Radius.circular(30))),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Image.asset('assets/chickenpondeuse.png',
+                                  height: 100),
+                              Column(
+                                children: [
+                                  SizedBox(
+                                    height: 30,
+                                  ),
+                                  Text('Pondeuse',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.comicNeue(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold)),
+                                  inputsizebox,
+                                  Text('omoqsoq',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.comicNeue(
+                                        fontSize: 16,
+                                      )),
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
                     inputsizebox,
-                    Material(
-                      elevation: 15,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      surfaceTintColor: mainColor,
-                      color: mainColor,
-                      shadowColor: mainColor,
-                      type: MaterialType.card,
-                      child: InkWell(
-                        onTap: () {
-                            Get.to(SelectAge());
-                        },
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          shadowColor: mainColor,
-                          elevation: 15,
-                          child: Container(
-                            height: 200,
-                            padding: EdgeInsets.all(10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                SvgPicture.asset(
-                                  'assets/rooster.svg',
-                                  height: 100,
-                                ),
-                                Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 30,
-                                    ),
-                                    Text('Pondeuse',
-                                        style: GoogleFonts.comicNeue(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold)),
-                                    inputsizebox,
-                                    Text('Lui c\'est un poulet mouton',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.comicNeue(
-                                          fontSize: 16,
-                                        )),
-                                  ],
-                                )
-                              ],
-                            ),
+                    InkWell(
+                      onTap: () {
+                          Get.to(SelectAge());
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        shadowColor: mainColor,
+                        elevation: 15,
+                        child: Container(
+                          height: 200,
+                          padding: EdgeInsets.all(10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Image.asset(
+                                'assets/chickenpouletchair.png',
+                                height: 100,
+                              ),
+                              Column(
+                                children: [
+                                  SizedBox(
+                                    height: 30,
+                                  ),
+                                  Text('Poulet Chair',
+                                      style: GoogleFonts.comicNeue(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold)),
+                                  inputsizebox,
+                                  Text('Lui c\'est un poulet mouton',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.comicNeue(
+                                        fontSize: 16,
+                                      )),
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
-                    )
+                    ),
+                     OutlinedButton(
+                        style: ButtonStyle(
+                            elevation: MaterialStateProperty.all<double?>(15),
+                            padding:
+                                MaterialStateProperty.all<EdgeInsetsGeometry?>(
+                                    EdgeInsets.symmetric(
+                                        vertical: 10, horizontal: 45)),
+                       
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder?>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40)))),
+                        onPressed: (() => Get.back()),
+                        child: Text(
+                          'Retour',
+                          style: GoogleFonts.comicNeue(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: mainColor),
+                        )),
                   ],
                 )),
           )

@@ -45,6 +45,10 @@ dependencies:
   onboarding: ^3.1.0
   onboarding_screen: ^0.0.3
   flutter_spinkit: ^5.1.0
+  shared_preferences: ^2.0.15
+  smooth_page_indicator: ^1.0.0+2
+  share_plus: ^4.0.5
+  intl_phone_field: ^3.1.0
   
 dev_dependencies:
   flutter_test:
@@ -70,7 +74,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/chicken.svg
+    - assets/rooster.svg
     - assets/chicken3.svg
     - assets/chickeneffectif.jpeg
     - assets/chickenfinission.png
@@ -79,6 +83,11 @@ flutter:
     - assets/chickenpouletchair.png
     - assets/chickenpondeuse.png
     - assets/chickenacceuil.jpg
+    - assets/rooster2.ico
+    - assets/roostericon.ico
+    - assets/chicken5.svg
+    - assets/chicken6.svg
+    - assets/chicken7.svg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

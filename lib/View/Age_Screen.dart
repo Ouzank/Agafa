@@ -54,8 +54,8 @@ class _SelectAgeState extends State<SelectAge> {
               child: Column(
                 children: [
                   Center(
-                    child: Text("Selectionner l'âge de  votre population",
-                    style: TextStyle(
+                    child: Text("Sélectionner l'âge de  votre population",
+                    style: GoogleFonts.comicNeue(
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                             color: mainColor,
@@ -77,16 +77,16 @@ class _SelectAgeState extends State<SelectAge> {
                         ),
                         ),
                         Column(
-                          children: const [
+                          children: [
                             Center(
                               child: Text(
-                                'Poussin Demarrage',
-                                style: TextStyle(
+                                'Poussin Démarrage',
+                                style: GoogleFonts.comicNeue(
                                     fontSize:16, fontWeight: FontWeight.w900),
                               ),
                             ),
                             Text('un poulet croquette',
-                            style: TextStyle(
+                            style: GoogleFonts.comicNeue(
                             fontSize: 18,
                             fontWeight: FontWeight.w400,
                           ), )
@@ -113,16 +113,16 @@ class _SelectAgeState extends State<SelectAge> {
                           ),
                         ),
                         Column(
-                          children: const [
+                          children: [
                             Center(
                               child: Text(
                                 'Poussin Croissance',
-                                style: TextStyle(
+                                style: GoogleFonts.comicNeue(
                                     fontSize: 16, fontWeight: FontWeight.w900),
                               ),
                             ),
                             Text('un mini poulet',
-                            style: TextStyle(
+                            style: GoogleFonts.comicNeue(
                             fontSize: 20,
                             fontWeight: FontWeight.w400,
                           ))
@@ -148,16 +148,16 @@ class _SelectAgeState extends State<SelectAge> {
                           ),
                         ),
                         Column(
-                          children: const [
+                          children:  [
                             Center(
                               child: Text(
-                                'Poulette Finission',
-                                style: TextStyle(
+                                'Poulette Finition',
+                                style: GoogleFonts.comicNeue(
                                     fontSize: 20, fontWeight: FontWeight.w900),
                               ),
                             ),
                             Text('Poulet adulte',
-                            style: TextStyle(
+                            style: GoogleFonts.comicNeue(
                             fontSize: 20,
                             fontWeight: FontWeight.w400,
                           ),)
@@ -169,22 +169,34 @@ class _SelectAgeState extends State<SelectAge> {
                   SizedBox(
                     height: 20.0,
                   ),
-                  Row(children: [
-                    TextButton(
-                      onPressed: (() =>
-                          Get.back()), //la page de selection de du type),
-                      child: Text("Précédent",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: mainColor,
-                          )),
-                    ),
-                    SizedBox(width: 100),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                     OutlinedButton(
+                        style: ButtonStyle(
+                            elevation: MaterialStateProperty.all<double?>(15),
+                            padding:
+                                MaterialStateProperty.all<EdgeInsetsGeometry?>(
+                                    EdgeInsets.symmetric(
+                                        vertical: 10, horizontal: 45)),
+                       
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder?>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40)))),
+                        onPressed: (() => Get.back()),
+                        child: Text(
+                          'Retour',
+                          style: GoogleFonts.comicNeue(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: mainColor),
+                        )),
+                  
                     ElevatedButton(
                       onPressed: (() => Get.to(SelectEffectif())),
                       child: Text("Suivant",
-                          style: TextStyle(
+                          style: GoogleFonts.comicNeue(
                               fontSize: 20, fontWeight: FontWeight.w900)),
                       style: ButtonStyle(
                           elevation: MaterialStateProperty.all<double?>(15),

@@ -1,11 +1,13 @@
 import 'package:agafa/Constants/controllers.dart';
 import 'package:agafa/View/SignIn_Screen.dart';
 import 'package:agafa/Widgets/BuildButton_Widget.dart';
+import 'package:agafa/Widgets/Loading_Widget.dart';
 import 'package:agafa/Widgets/TextFormField._Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '../Constants/constants.dart';
 
@@ -19,29 +21,29 @@ class SignUp extends StatelessWidget {
     final currentSize = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: mainColor,
-        body: SafeArea(
-            child: Column(children: [
-          SafeArea(
-            child: Container(
-              child: Center(
-                child: Text(
-                  "Bienvenue",
-                  style: GoogleFonts.comicNeue(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.w900),
-                ),
-              ),
-              height: 75,
-              decoration: BoxDecoration(color: mainColor),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
+        body: Obx(() => signUpLoading.value ? Loading():SafeArea(
+                    child: Column(children: [
+                  SafeArea(
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "Bienvenue",
+                          style: GoogleFonts.comicNeue(
+                              color: Colors.white,
+                              fontSize: 35,
+                              fontWeight: FontWeight.w900),
+                        ),
+                      ),
+                      height: 75,
+                      decoration: BoxDecoration(color: mainColor),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30),
                       topRight: Radius.circular(30))),
               child: Center(
                 child: SingleChildScrollView(
@@ -51,7 +53,7 @@ class SignUp extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Form(
-                          //  key: formKeyRegister,
+                         key: formKeyRegister,
                             child: Column(
                               children: [
                                 Center(
@@ -69,12 +71,25 @@ class SignUp extends StatelessWidget {
                                     userController.email,
                                     "Entrez nom l'email"),
                                 inputsizebox,
-                                myTextFormField(
-                                    "Telephone",
-                                    Icons.phone,
-                                    userController.phone,
-                                    "Entrez votre  numero de téléphone"),
-                                inputsizebox,
+                              IntlPhoneField(
+                          dropdownTextStyle: TextStyle(
+                              fontSize: 10, height: 1),
+                          style: TextStyle(fontSize: 10, height: 1),
+
+                          searchText: 'Rechercher',
+                          invalidNumberMessage:
+                              'Numéro de téléphone obligatoire',
+                          controller: userController.phone,
+                          onSaved: (value) {
+                            userController.phone.text = value!.number;
+                          },
+                          decoration: InputDecoration(
+                              fillColor: inputColor,
+                              filled: true,
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20))),
+                          initialCountryCode: 'BJ',
+                        ),    
                                 Obx(() => TextFormField(
                                       controller: userController.password,
                                       validator: (value) => value!.length < 6
@@ -147,10 +162,21 @@ class SignUp extends StatelessWidget {
                                 const SizedBox(
                                   height: 20,
                                 ),
-                                buildButton(
-                                  "S'inscrire",
-                                  formKeyRegister,
-                                ),
+                               ElevatedButton(
+    onPressed: () {
+      validator(formKeyRegister);
+    },
+    child: Text('S\'inscrire',
+        style:GoogleFonts.comicNeue(fontSize: 25, fontWeight: FontWeight.w900)),
+    style: ButtonStyle(
+        elevation: MaterialStateProperty.all<double?>(15),
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+            EdgeInsets.symmetric(vertical: 10, horizontal: 45)),
+        backgroundColor:
+            MaterialStateProperty.all<Color>(Color.fromARGB(255, 3, 131, 33)),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder?>(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)))),
+  ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -175,11 +201,11 @@ class SignUp extends StatelessWidget {
               ),
             ),
           ),
-        ])));
+        ]))));
   }
 }
 
-void validator(formState) {
+void validator (GlobalKey<FormState>  formState) {
   if (formState.currentState!.validate()) {
     userController.signUp(
         userController.email.text,
