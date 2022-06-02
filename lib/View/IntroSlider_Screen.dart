@@ -48,8 +48,7 @@ class _IntroductionSliderState extends State<IntroductionSlider> {
                     child: Column(mainAxisAlignment: MainAxisAlignment.center,
                         // ignore: prefer_const_literals_to_create_immutables
                         children: [
-                          Image.asset('',
-                              height: 200),
+                         // Image.asset('',height: 200),
                           SizedBox(
                             height: 30,
                           ),
@@ -68,7 +67,7 @@ class _IntroductionSliderState extends State<IntroductionSlider> {
               child: Column(mainAxisAlignment: MainAxisAlignment.center,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    Image.asset('', height: 200),
+                    //Image.asset('', height: 200),
                     SizedBox(
                       height: 30,
                     ),
@@ -87,7 +86,7 @@ class _IntroductionSliderState extends State<IntroductionSlider> {
               child: Column(mainAxisAlignment: MainAxisAlignment.center,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    Image.asset('', height: 200),
+                   // Image.asset('', height: 200),
                     SizedBox(
                       height: 30,
                     ),

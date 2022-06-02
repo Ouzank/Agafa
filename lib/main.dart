@@ -2,6 +2,7 @@
 
 import 'package:agafa/Constants/constants.dart';
 import 'package:agafa/Controllers/UserController.dart';
+import 'package:agafa/View/Age_Screen.dart';
 import 'package:agafa/View/Effectif_Screen.dart';
 import 'package:agafa/View/GetStarted_Screen.dart';
 import 'package:agafa/View/PopulationType_Screen.dart';

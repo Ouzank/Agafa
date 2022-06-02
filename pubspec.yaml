@@ -88,7 +88,7 @@ flutter:
     - assets/chicken5.svg
     - assets/chicken6.svg
     - assets/chicken7.svg
-    
+    - assets/chicken4.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -16,34 +16,47 @@ class PopulationType extends StatelessWidget {
     final currentSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: mainColor,
-      body: Column(
-        children: [
-          Container(
-              alignment: AlignmentDirectional.center,
-              width: currentSize.width,
-              height: 150,
-              decoration: BoxDecoration(color: mainColor),
-              child: Text('AGAFA',
-                  style: GoogleFonts.comicNeue(
-                      fontSize: 40,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w900))),
-          Expanded(
+      appBar: (AppBar(
+        backgroundColor: mainColor,
+        elevation: 0,
+        title: Text(
+          "Population",
+          textAlign: TextAlign.center,
+          style: GoogleFonts.comicNeue(
+              fontSize: 20, fontWeight: FontWeight.w600),
+        ),
+      )),
+      body:SafeArea( 
+      //Column(
+        // children: [
+        //   Container(
+        //       alignment: AlignmentDirectional.center,
+        //       width: currentSize.width,
+        //       height: 150,
+        //       decoration: BoxDecoration(color: mainColor),
+        //       child: Text('AGAFA',
+        //           style: GoogleFonts.comicNeue(
+        //               fontSize: 40,
+        //               color: Colors.white,
+        //               fontWeight: FontWeight.w900))),
+
+          child:Expanded(
             child: Container(
                 padding: EdgeInsets.all(15),
                 alignment: AlignmentDirectional.center,
                 height: currentSize.height,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30))),
+                    color: Colors.white,),
+                    // borderRadius: BorderRadius.only(
+                    //     topLeft: Radius.circular(30),
+                    //     topRight: Radius.circular(30))
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    Text('Sélectionner le type de la population',style:GoogleFonts.comicNeue(fontSize: 20)),
                     InkWell(
                       onTap: (() {
-                        Get.to(SelectEffectif());
+                        Get.to(SelectAge());
                       }),
                       child: Card(
                         shape: RoundedRectangleBorder(
@@ -74,8 +87,8 @@ class PopulationType extends StatelessWidget {
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold)),
                                   inputsizebox,
-                                  Text('omoqsoq',
-                                      textAlign: TextAlign.center,
+                                  Text('Poule domestique élevée\ndans le but de\nproduire des oeufs\nutilisés dans\nl\'alimentation humaine',
+                                      textAlign: TextAlign.left,
                                       style: GoogleFonts.comicNeue(
                                         fontSize: 16,
                                       )),
@@ -112,13 +125,13 @@ class PopulationType extends StatelessWidget {
                                   SizedBox(
                                     height: 30,
                                   ),
-                                  Text('Poulet Chair',
+                                  Text('Poulet de Chair',
                                       style: GoogleFonts.comicNeue(
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold)),
                                   inputsizebox,
-                                  Text('Lui c\'est un poulet mouton',
-                                      textAlign: TextAlign.center,
+                                  Text('Poule domestique élevée\nspécifiquement pour la production\nde viande',
+                                      textAlign: TextAlign.left,
                                       style: GoogleFonts.comicNeue(
                                         fontSize: 16,
                                       )),
@@ -129,30 +142,30 @@ class PopulationType extends StatelessWidget {
                         ),
                       ),
                     ),
-                     OutlinedButton(
-                        style: ButtonStyle(
-                            elevation: MaterialStateProperty.all<double?>(15),
-                            padding:
-                                MaterialStateProperty.all<EdgeInsetsGeometry?>(
-                                    EdgeInsets.symmetric(
-                                        vertical: 10, horizontal: 45)),
+                //      OutlinedButton(
+                //         style: ButtonStyle(
+                //             elevation: MaterialStateProperty.all<double?>(15),
+                //             padding:
+                //                 MaterialStateProperty.all<EdgeInsetsGeometry?>(
+                //                     EdgeInsets.symmetric(
+                //                         vertical: 10, horizontal: 45)),
                        
-                            shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder?>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
-                        onPressed: (() => Get.back()),
-                        child: Text(
-                          'Retour',
-                          style: GoogleFonts.comicNeue(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: mainColor),
-                        )),
-                  ],
-                )),
+                //             shape: MaterialStateProperty.all<
+                //                     RoundedRectangleBorder?>(
+                //                 RoundedRectangleBorder(
+                //                     borderRadius: BorderRadius.circular(40)))),
+                //         onPressed: (() => Get.back()),
+                //         child: Text(
+                //           'Retour',
+                //           style: GoogleFonts.comicNeue(
+                //               fontSize: 20,
+                //               fontWeight: FontWeight.w500,
+                //               color: mainColor),
+                //         )),
+                //   ],
+                // )),
+                  ],)  )
           )
-        ],
       ),
     );
   }

@@ -3,11 +3,13 @@
 import 'package:agafa/Constants/Firebase.dart';
 import 'package:agafa/Constants/constants.dart';
 import 'package:agafa/Constants/controllers.dart';
+import 'package:agafa/View/ListeIngredient_Screen.dart';
 import 'package:agafa/Widgets/BuidMenuItem_Widget.dart';
 import 'package:agafa/Widgets/Loading_Widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../Widgets/BuildDrawerHeader_Widget.dart';
 
@@ -55,6 +57,10 @@ class MyDrawer extends StatelessWidget {
               Divider(
                 color: Colors.black,
               ),
+        
+      buildMenuItem('Liste des ingrédients', Icons.list_alt_rounded, () {
+        Get.to(ListIngredient());
+      }),
               SizedBox(
                 height: 10,
               ),
@@ -77,8 +83,8 @@ class MyDrawer extends StatelessWidget {
                       Map<String, dynamic> data =
                           snapshot.data!.data() as Map<String, dynamic>;
                       return buildMenuItem('Partagez', Icons.share, () async {
-                        // Share.share(
-                        //     'check out my website https://' + data['website']);
+                        Share.share(
+                            'check out my website https://' + 'www.google.com');
                       });
                     }
                     return buildMenuItem('Partagez', Icons.share, () async {});

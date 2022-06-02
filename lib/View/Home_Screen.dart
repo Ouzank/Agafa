@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
       drawer: MyDrawer(),
       body: Center(
         child: Text(
-          'Aucune formule n\'a encore été ajouté',
+          'Aucune formule n\'a encore été ajoutée',
           style: GoogleFonts.comicNeue(fontSize: 20),
         ),
       ),
