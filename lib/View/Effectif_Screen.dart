@@ -26,31 +26,38 @@ class _SelectEffectifState extends State<SelectEffectif> {
     final currentSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: mainColor,
+      appBar: AppBar(
+        backgroundColor: mainColor,
+        elevation: 0,
+        title: Text(
+          "Effectif",
+          textAlign: TextAlign.center,
+          style: GoogleFonts.comicNeue(
+              fontSize: 20, fontWeight: FontWeight.w600),
+        ),
+      ),
       body: SafeArea(
-          child: Column(
-        children: [
-          SafeArea(
-            child: Container(
-                alignment: AlignmentDirectional.center,
-                height: 90.0,
-                child: Text('AGAFA',
-                    style: GoogleFonts.comicNeue(
-                        fontSize: 40,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900))),
-          ),
-          Expanded(child: 
-          Container(
-              padding: EdgeInsets.all(10),
-             
+        //    Column(
+        // children: [
+        //   SafeArea(
+        //     child: Container(
+        //         alignment: AlignmentDirectional.center,
+        //         height: 90.0,
+        //         child: Text('AGAFA',
+        //             style: GoogleFonts.comicNeue(
+        //                 fontSize: 40,
+        //                 color: Colors.white,
+        //                 fontWeight: FontWeight.w900))),
+        //   ),
+          child:Expanded(child: Container(
+              padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0),
-                ),
+               // borderRadius: BorderRadius.only(
+                //   topLeft: Radius.circular(30.0),
+                //   topRight: Radius.circular(30.0),
+                // ),
                 color: Colors.white,
               ),
-              child: SingleChildScrollView(
                 child: Column(
                   children: [
                     Center(
@@ -87,28 +94,28 @@ class _SelectEffectifState extends State<SelectEffectif> {
                     ),
                     Row
                     (
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                      OutlinedButton(
-                         style: ButtonStyle(
-                                  elevation:
-                                      MaterialStateProperty.all<double?>(15),
-                                  padding:
-                                      MaterialStateProperty.all<EdgeInsetsGeometry?>(
-                                          EdgeInsets.symmetric(
-                                              vertical: 10, horizontal: 45)),
-                                   shape: MaterialStateProperty.all<
-                                          RoundedRectangleBorder?>(
-                                      RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(40)))),
-                          onPressed: (() => Get.back()),
-                          child: Text(
-                            'Précédent',
-                            style: GoogleFonts.comicNeue(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: mainColor),
-                          )),
+                      // OutlinedButton(
+                      //    style: ButtonStyle(
+                      //             elevation:
+                      //                 MaterialStateProperty.all<double?>(15),
+                      //             padding:
+                      //                 MaterialStateProperty.all<EdgeInsetsGeometry?>(
+                      //                     EdgeInsets.symmetric(
+                      //                         vertical: 10, horizontal: 45)),
+                      //              shape: MaterialStateProperty.all<
+                      //                     RoundedRectangleBorder?>(
+                      //                 RoundedRectangleBorder(
+                      //                     borderRadius: BorderRadius.circular(40)))),
+                      //     onPressed: (() => Get.back()),
+                      //     child: Text(
+                      //       'Précédent',
+                      //       style: GoogleFonts.comicNeue(
+                      //           fontSize: 20,
+                      //           fontWeight: FontWeight.w500,
+                      //           color: mainColor),
+                      //     )),
                     
                       Center(
                           child: ElevatedButton(
@@ -128,14 +135,13 @@ class _SelectEffectifState extends State<SelectEffectif> {
                                     RoundedRectangleBorder?>(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40)))),
-                      ))
-                    ])
+                      ),)
+                    ]),
                   ],
                 ),
-              ))
+              ),),
                   ),
-                  ],
-      )),
-    );
+      );
+    
   }
 }

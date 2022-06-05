@@ -49,7 +49,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   share_plus: ^4.0.5
   intl_phone_field: ^3.1.0
-  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -88,7 +88,7 @@ flutter:
     - assets/chicken5.svg
     - assets/chicken6.svg
     - assets/chicken7.svg
-    
+    - assets/chicken4.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
