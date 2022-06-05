@@ -26,7 +26,7 @@ class _SelectAgeState extends State<SelectAge> {
         backgroundColor: mainColor,
         elevation: 0,
         title: Text(
-          'Age de la population',
+          'Select population age',
           style: GoogleFonts.dancingScript(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -62,8 +62,7 @@ class _SelectAgeState extends State<SelectAge> {
                 // ),
                 color: Colors.white),
             padding: EdgeInsets.all(10.0),
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+            child: ListView(
               children: [
                 // Center(
                 //   child: Text("Sélectionner l'âge de  votre population",
@@ -73,9 +72,6 @@ class _SelectAgeState extends State<SelectAge> {
                 //           color: mainColor,
                 //         )),
                 // ),
-                  Text('Sélectionner l\'age de la population',
-                  style: GoogleFonts.comicNeue(fontSize: 20)),
-                  
                 SizedBox(
                   height: 20.0,
                 ),

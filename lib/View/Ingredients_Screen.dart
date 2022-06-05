@@ -56,11 +56,11 @@ class _IngredientState extends State<Ingredient> {
                                   child: Column(
                                     children: [
                                       Text('Information'),
-                                      myTextFormField(
-                                          "Prix en fr",
-                                          Icons.monetization_on,
-                                          ingredientController.price,
-                                          "Entrez le lien vers la plateforme"),
+                                      // myTextFormField(
+                                      //     "Prix en fr",
+                                      //     Icons.monetization_on,
+                                      //     ingredientController.price,
+                                      //     "Entrez le lien vers la plateforme"),
                                           inputsizebox,
                                ]       ),
                                 ),

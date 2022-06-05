@@ -54,7 +54,6 @@ class PopulationType extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Sélectionner le type de la population',style:GoogleFonts.comicNeue(fontSize: 20)),
-                    SizedBox(height: 30,),
                     InkWell(
                       onTap: (() {
                         Get.to(SelectAge());

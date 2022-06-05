@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:agafa/Constants/constants.dart';
-import 'package:agafa/Controllers/IngredientController.dart';
 import 'package:agafa/Controllers/UserController.dart';
 import 'package:agafa/View/Age_Screen.dart';
 import 'package:agafa/View/Effectif_Screen.dart';
@@ -17,7 +16,6 @@ import 'View/SignIn_Screen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp().then((value) {
-       Get.put(IngredientController());
     Get.put(UserController());
   });
     prefs = await SharedPreferences.getInstance();
